@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Special Friend ❤️</title>
+
+<style>
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #fff5f8;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 25px;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff4f81;
+}
+
+nav a {
+    text-decoration: none;
+    color: #444;
+    margin-left: 18px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #ff4f81;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px 50px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffe1eb, #fff7fa);
+}
+
+.hero-content {
+    max-width: 700px;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 8vw, 75px);
+    color: #ff4f81;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: clamp(20px, 4vw, 32px);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 28px;
+    border-radius: 30px;
+    background: #ff4f81;
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255,79,129,0.3);
+}
+
+/* Floating hearts */
+
+.heart {
+    position: absolute;
+    font-size: 25px;
+    animation: float 6s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section {
+    padding: 90px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 38px;
+    color: #ff4f81;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 45px;
+}
+
+/* =========================
+   MEMORIES
+========================= */
+
+.memory-grid {
+    width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.memory-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.memory-card:hover {
+    transform: translateY(-8px);
+}
+
+.memory-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.memory-card-content {
+    padding: 20px;
+}
+
+.memory-card h3 {
+    color: #ff4f81;
+    margin-bottom: 8px;
+}
+.videomem video {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+/* =========================
+   ABOUT HER
+========================= */
+
+.about {
+    background: #fff;
+}
+
+.about-box {
+    max-width: 850px;
+    margin: auto;
+    background: #fff5f8;
+    padding: 35px;
+    border-radius: 25px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.facts {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.fact {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.fact span {
+    font-size: 28px;
+}
+
+/* =========================
+   LETTER
+========================= */
+
+.letter {
+    background: linear-gradient(135deg, #fff0f5, #ffe3ed);
+}
+
+.letter-box {
+    max-width: 750px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    line-height: 1.9;
+    font-size: 17px;
+}
+
+#typedLetter {
+    white-space: pre-line;
+}
+
+/* =========================
+   SONGS
+========================= */
+
+.song-grid {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    gap: 20px;
+}
+
+.song {
+    background: white;
+    padding: 22px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.song button {
+    border: none;
+    background: #ff4f81;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* =========================
+   QUIZ
+========================= */
+
+.quiz {
+    background: #fff;
+}
+
+.quiz-box {
+    max-width: 600px;
+    margin: auto;
+    background: #fff5f8;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.question {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.options button {
+    width: 100%;
+    margin: 8px 0;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.options button:hover {
+    background: #ff4f81;
+    color: white;
+}
+
+#quizResult {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* =========================
+   SURPRISE
+========================= */
+
+.surprise {
+    background: linear-gradient(135deg, #ffdae7, #fff1f6);
+    text-align: center;
+}
+
+.gift {
+    font-size: 100px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.4s;
+}
+
+.gift:hover {
+    transform: scale(1.15) rotate(5deg);
+}
+
+#surpriseMessage {
+    display: none;
+    max-width: 650px;
+    margin: 30px auto 0;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    font-size: 20px;
+    line-height: 1.8;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer span {
+    color: #ff4f81;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    nav {
+        padding: 12px 15px;
+    }
+
+    nav a {
+        display: none;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 70px 15px;
+    }
+
+    .letter-box {
+        padding: 25px;
+    }
+
+    .song {
+        gap: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+    <div class="logo">For You ❤️</div>
+
+    <div>
+        <a href="#home">Home</a>
+        <a href="#memories">Memories</a>
+        <a href="#about">About</a>
+        <a href="#letter">Letter</a>
+        <a href="#surprise">Surprise</a>
+    </div>
+</nav>
+
+
+<!-- =========================
+     HOME
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>Hello,Sankari Mam❤️</h1>
+
+        <h2>A Little Website Made Just For You</h2>
+
+        <p>
+            YOUR MY FIRST GIRL I EVER TALK.
+            MY SPECIAL PERSON IN LIFE.  
+        </p>
+
+        <a href="#memories" class="btn">
+            Start Our Story ✨
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MEMORIES
+========================= -->
+
+<section id="memories">
+
+    <h2 class="section-title">Our Memories 📸</h2>
+
+    <p class="section-subtitle">
+    </p>
+
+    <div class="memory-grid">
+
+        <div class="memory-card">
+
+            <img src="photos/photo6.jpeg">
+
+            <div class="memory-card-content">
+                <h3>First Memory 🌸</h3>
+                <p>
+                    special about the first
+                    memory you want to remember.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="memory-card">
+
+            <img src="photos/photo3.jpeg">
+
+            <div class="memory-card-content">
+                <h3>Crazy Moments 😂</h3>
+                <p>
+                    The moments where we laughed until
+                    we couldn't stop.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="memory-card">
+
+            <img src="photos/photo1.jpeg" alt=""photos>
+
+            <div class="memory-card-content">
+                <h3>Best Days ✨</h3>
+                <p>
+                    Some ordinary days become beautiful
+                    because of the people around us.
+                </p>
+            </div>
+            <div class="videomem">
+
+    <video controls poster="photos/memory1.jpg">
+        <source src="video/video1.mp4" type="video/mp4">
+        Your browser does not support video.
+    </video>
+
+    <div class="memory-card-content">
+        <h3>Our Special Moment 🎥</h3>
+        <p>
+            One of my favorite memories with you ❤️
+        </p>
+    </div>
+
+</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about" id="about">
+
+    <h2 class="section-title">A Few Things About You 🌷</h2>
+
+    <p class="section-subtitle">
+    </p>
+
+    <div class="about-box">
+
+        <p>
+            You are someone who brings a different kind of
+            happiness into the lives of people around you.
+            Your personality, your smile, and the little
+            things you do make you memorable.
+        </p>
+
+        <div class="facts">
+
+            <div class="fact">
+                <span>🎨</span>
+                <h3>Favorite Color</h3>
+                <p>blue</p>
+            </div>
+
+            <div class="fact">
+                <span>🥘🍗🍗</span>
+                <h3>Favorite Food</h3>
+                <p>biriyani</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LETTER
+========================= -->
+
+<section class="letter" id="letter">
+
+    <h2 class="section-title">A Little Letter 💌</h2>
+
+    <p class="section-subtitle">
+        Click the button to reveal the message.
+    </p>
+
+    <div class="letter-box">
+
+        <button class="btn" onclick="startLetter()">
+            Open My Letter 💌
+        </button>
+
+        <p id="typedLetter"></p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SONGS
+========================= -->
+
+<section id="songs">
+
+    <h2 class="section-title">Songs That Remind Me Of You 🎵</h2>
+
+    <p class="section-subtitle">
+        Some songs that remind me of our memories ❤️
+    </p>
+
+    <div class="song-grid">
+
+        <div class="song">
+            <div>
+                <strong>🎵 Our Song</strong>
+                <p>Our special song</p>
+            </div>
+
+            <button onclick="playSong('song3')">
+                ▶ Play
+            </button>
+        </div>
+
+        <div class="song">
+            <div>
+                <strong>🎵 Memory Song</strong>
+                <p>A song that reminds me of you</p>
+            </div>
+
+            <button onclick="playSong('song1')">
+                ▶ Play
+            </button>
+        </div>
+
+        <div class="song">
+            <div>
+                <strong>🎵 Special Song</strong>
+                <p>A song just for you</p>
+            </div>
+
+            <button onclick="playSong('song2')">
+                ▶ Play
+            </button>
+        </div>
+
+    </div>
+
+    <audio id="musicPlayer" controls style="display:block; margin:30px auto;">
+        Your browser does not support audio.
+    </audio>
+
+</section>
+
+<!-- =========================
+     SURPRISE
+========================= -->
+
+<section class="surprise" id="surprise">
+
+    <h2 class="section-title">One Last Surprise 🎁</h2>
+
+    <p class="section-subtitle">
+        Tap the gift.
+    </p>
+
+    <div class="gift" onclick="openGift()">
+        🎁
+    </div>
+
+    <div id="surpriseMessage">
+
+        <h2>For You ❤️</h2>
+
+        <br>
+
+        <p>
+            Thank you for being a beautiful part of my life.
+            I don't know where life will take us,
+            but I hope we always keep the memories,
+            we shared.
+        </p>
+
+        <br>
+
+        <p>
+            Stay happy. Stay amazing. 🌷
+        </p>
+
+        <br>
+
+        <strong>
+            — From someone who truly values you ❤️
+        </strong>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    Made with ❤️ for <span>my bestiee</span>
+
+</footer>
+
+
+<script>
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.classList.add("heart");
+
+    heart.innerHTML = "❤️";
+
+    heart.style.left = Math.random() * 100 + "%";
+
+    heart.style.animationDuration =
+        (4 + Math.random() * 5) + "s";
+
+    heart.style.fontSize =
+        (15 + Math.random() * 25) + "px";
+
+    document.querySelector(".hero").appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 9000);
+}
+
+setInterval(createHeart, 700);
+
+
+/* =========================
+   LETTER TYPING EFFECT
+========================= */
+
+const letterText = `
+My dear closeone,
+
+Na pesanum na neraiya pesalam ana na konjam matum tha solla poran.
+Oru sila nerathula ne enaku friendda kedachathu ku romba happy ya irukum.
+
+Na okita pesuna first day la iruthu theriyum ne kadaisi varikum irupanu theriyum
+
+Oru sila nerathula ne konjam enaku importants kuduka matikura thonum.
+Antha nerathula seri ok oru nalla seri agidum therichi vituduvan.
+enaku thonum oru oru timemum natha thapu panitomo thonum,
+Atha nallala tha na silent taaa aduvan 😔😓.
+
+Sometimes thonum onnoda limit cross pannaranu apadi ethavu thu irutha,
+I am sorry😥.
+
+
+na ogaluku oru best friend da irukana theriyala.
+
+you trust me i never ever can't leave you alone anytime.
+
+please by mistake I am sorry and thank you for my being part of my life.❤️
+
+— [Your NALLU KANNA]
+`;
+
+let letterStarted = false;
+
+function startLetter() {
+
+    if (letterStarted) return;
+
+    letterStarted = true;
+
+    const element = document.getElementById("typedLetter");
+
+    let i = 0;
+
+    function type() {
+
+        if (i < letterText.length) {
+
+            element.textContent += letterText.charAt(i);
+
+            i++;
+
+            setTimeout(type, 35);
+
+        }
+
+    }
+
+    type();
+}
+
+
+/* =========================
+   SONG BUTTON
+========================= */
+
+function playSong(song) {
+
+    const player = document.getElementById("musicPlayer");
+
+    if (song === "song3") {
+        player.src = "music/song3.mpeg";
+    }
+
+    if (song === "song1") {
+        player.src = "music/song1.mpeg";
+    }
+
+    if (song === "song2") {
+        player.src = "music/song2.mpeg";
+    }
+    player.load();
+    player.play();
+}
+/* =========================
+   GIFT
+========================= */
+
+function openGift() {
+
+    const message =
+        document.getElementById("surpriseMessage");
+
+    message.style.display = "block";
+
+    createHeartExplosion();
+
+}
+
+
+/* =========================
+   HEART EXPLOSION
+========================= */
+
+function createHeartExplosion() {
+
+    const emojis = [
+        "❤️",
+        "💖",
+        "💕",
+        "💗",
+        "✨",
+        "🌸"
+    ];
+
+    for (let i = 0; i < 30; i++) {
+
+        const heart = document.createElement("div");
+
+        heart.innerHTML =
+            emojis[Math.floor(Math.random() * emojis.length)];
+
+        heart.style.position = "fixed";
+
+        heart.style.left = "50%";
+
+        heart.style.top = "50%";
+
+        heart.style.fontSize = "25px";
+
+        heart.style.zIndex = "9999";
+
+        heart.style.pointerEvents = "none";
+
+        const x =
+            (Math.random() - 0.5) * 600;
+
+        const y =
+            (Math.random() - 0.5) * 600;
+
+        heart.animate(
+            [
+                {
+                    transform: "translate(-50%, -50%)",
+                    opacity: 1
+                },
+
+                {
+                    transform:
+                        `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
+                    opacity: 0
+                }
+            ],
+            {
+                duration: 1500,
+                easing: "ease-out"
+            }
+        );
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 1500);
+    }
+
+}
+
+</script>
+
+</body>
+</html>
+```
